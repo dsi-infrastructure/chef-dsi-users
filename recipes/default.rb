@@ -24,3 +24,9 @@ if node['dsi-users']['dev'] == true
     passwordless true
   end
 end
+
+if node['fqdn'].include? "dev"
+  dsi_users 'dev' do
+    passwordless true
+  end
+end
