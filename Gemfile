@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 gem 'berkshelf'
 gem 'highline'
-gem 'unix_crypt'
-gem 'securerandom'
+gem 'unix-crypt'
+gem 'rubysl-securerandom'
+gem 'knife-solo_data_bag'
 
 # Uncomment these lines if you want to live on the Edge:
 #
