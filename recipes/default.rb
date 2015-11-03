@@ -18,7 +18,10 @@
 #
 
 dsi_users 'sysadmin'
-dsi_users 'rundeck'
+
+if node['fqdn'].exclude? "gitlab"
+  dsi_users 'rundeck'
+end
 
 if node['dsi-users']['dev'] == true
   dsi_users 'vagrant' do
