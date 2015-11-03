@@ -20,8 +20,9 @@
 dsi_users 'sysadmin'
 
 unless node['fqdn'].include? "gitlab"
-  dsi_users 'rundeck'
-  passwordless true
+  dsi_users 'rundeck' do
+    passwordless true
+  end
 end
 
 if node['dsi-users']['dev'] == true
