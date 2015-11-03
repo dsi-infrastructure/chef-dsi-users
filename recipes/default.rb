@@ -19,7 +19,7 @@
 
 dsi_users 'sysadmin'
 
-if node['fqdn'].exclude? "gitlab"
+unless node['fqdn'].include? "gitlab"
   dsi_users 'rundeck'
 end
 
