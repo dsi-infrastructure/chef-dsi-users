@@ -18,6 +18,7 @@
 #
 
 dsi_users 'sysadmin'
+dsi_users 'rundeck'
 
 if node['dsi-users']['dev'] == true
   dsi_users 'vagrant' do
